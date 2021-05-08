@@ -1,0 +1,50 @@
+*,*:after,*:before{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.titulo{
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 1rem;
+}
+
+.icono{
+    width: 3.5rem;
+    height: max-content;
+
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+.formulario input{
+    text-align: center;
+    margin: 0.5rem;
+}
+
+@media (min-width: 768px ) {
+    header{
+        flex-direction: row;
+    }
+    .formulario{
+        width: max-content;
+        flex-direction: row;
+        margin: 0;
+        height: fit-content;
+    }
+}
