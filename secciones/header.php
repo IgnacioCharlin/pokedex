@@ -19,8 +19,8 @@
             </a>
             <h1 class="titulo">Pokedex</h1>
                 <form class="formulario" action="secciones/sesion.php" method="POST">
-                    <input type="text" placeholder="Usuario" name="nombre">
-                    <input type="password" placeholder="Contraseña" name="contraseña">
+                    <input type="text" placeholder="Usuario" name="nombre" class="border border-warning rounded">
+                    <input type="password" placeholder="Contraseña" name="contraseña" class="border border-warning rounded">
                     <button type="submit" class="btn btn-primary">Ingresar</button>
                 </form>
 
@@ -42,6 +42,7 @@
 </html>
 
 <?php
+
 
  include_once ('/xampp/htdocs/pokedex/conexion/conexion.php');
 
