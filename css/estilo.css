@@ -37,6 +37,29 @@ header{
     margin: 0.5rem;
 }
 
+.icono-tipo img{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imagenes-pokemon{
+    width: 15rem;
+    height: 15rem;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulo-card{
+    font-family: 'Mogra', cursive;
+    text-transform: uppercase ;
+    font-size: xx-large;
+}
+
 @media (min-width: 768px ) {
     header{
         flex-direction: row;
