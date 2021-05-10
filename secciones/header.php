@@ -11,9 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
-<body>
-    <main>
-        <header>
+<main>
+    <header>
             <a href="index.php">
                 <img class="img-fluid icono" src="img/pokebola.png">
             </a>
@@ -24,22 +23,8 @@
                     <button type="submit" class="btn btn-primary">Ingresar</button>
                 </form>
 
-        </header>
-        <body>
-        <form name="MiForm" id="MiForm" method="post" action="model/insertar.php" enctype="multipart/form-data">
-            <h4 class="text-center">Seleccione imagen a cargar</h4>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Archivos</label>
-                <div class="col-sm-8">
-                    <input type="file" class="form-control" id="imagen" name="imagen" size="20">
-                </div>
-                <button name="submit" class="btn btn-primary">Cargar Imagen</button>
-            </div>
-        </form>
-        </body>
-    </main>
-</body>
-</html>
+    </header>
+
 
 <?php
 
