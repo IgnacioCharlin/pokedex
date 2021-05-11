@@ -2,5 +2,5 @@
 session_start();
 
 
-$_SESSION["isLogin"] = '';
+session_destroy();
 header("Location:/pokedex/index.php");
