@@ -1,27 +1,27 @@
 let nombre='';
 let tipo='';
 let img='';
-let i = 1;
+let i = 0;
 let id = '';
 function enviarDatos() {
-    while(i<20){
+    while(i<6){
     const fetchData = async () =>{
         try {
-
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const data = await res.json();
             id = data.game_indices[5].game_index;
             img = data.sprites.other.dream_world.front_default;
             nombre =data.forms[0].name
             tipo = data.types[0].type.name;
+            await realizaProceso(id,nombre,tipo,img);
         } catch (error) {
             console.log(error);
         }
-        realizaProceso(id,nombre,tipo,img);
-    }
 
-    fetchData();
+    }
     i++;
+    fetchData();
+
     }// declaración de la variable
 
     function realizaProceso(id,nombre , tipo , img){
@@ -39,7 +39,7 @@ function enviarDatos() {
                 $("#resultado").html("Procesando, espere por favor...");
             },
             success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
-                window.location.href='index.php';
+               window.location.href='index.php';
             }
         });
     }

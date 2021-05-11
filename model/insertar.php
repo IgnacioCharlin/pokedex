@@ -11,13 +11,6 @@ $nombre_imagen = $_POST['img'];
 $sentencia = $bd->prepare("INSERT INTO pokemon (id , imagen , nombre ,tipo) VALUES ($id,'$nombre_imagen','$nombre','$tipo')");
 $resultado = $sentencia->execute();
 
-if ($resultado) {
-    echo "Insertado Correctamente";
-    header('Location: ../index.php');
-}else{
-    echo "Ocurrio un error al insertar";
-}
-
 
 
 ?>
