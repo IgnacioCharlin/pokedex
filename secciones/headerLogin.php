@@ -17,14 +17,9 @@
             <a href="index.php">
                 <img class="img-fluid icono" src="img/pokebola.png">
             </a>
-            <h1 class="titulo">Pokedex</h1>
-                <form class="formulario" action="secciones/sesion.php" method="POST">
-                    <input type="text" placeholder="Usuario" name="nombre" class="border border-warning rounded">
-                    <input type="password" placeholder="Contraseña" name="contraseña" class="border border-warning rounded">
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                </form>
-            <form action="secciones/registrar.php" class="formulario">
-                    <button type="submit" class="btn btn-secondary">Registrarse</button>
+                <h1 class="titulo">Pokedex</h1>
+            <form action="/pokedex/secciones/logout.php" class="formulario">
+                    <button type="submit" class="btn btn-secondary">Log out</button>
             </form>
     </header>
 
