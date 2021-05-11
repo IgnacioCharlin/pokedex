@@ -37,7 +37,7 @@ if(isset($_SESSION['nombre'])){
                     <button type="submit" class="btn btn-primary">Ingresar</button>
 */
 
-echo $_SESSION['contraseña'];
+
 
 
 //echo ($_SESION['nombre']);
