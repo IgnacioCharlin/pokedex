@@ -6,6 +6,12 @@
     $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
     echo '<div class="container cards">';
+    ?>
+    <form class="buscador container">
+        <input type="text" class="input-buscador" required>
+        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+<?php
      foreach ($resultado as $pokemon){
 ?>
 <div class="card mt-5 container" style="width: 18rem;">
@@ -29,6 +35,10 @@
                     echo '<img src="img/Type_normal.png">';
                     break;
             }?></p>
+        <div class="card-botones">
+            <a href='model/editar.php?id=<?php echo $pokemon->id ?>'  class="btn btn-warning"><i class="far fa-edit"></i></a>
+            <a href='model/eliminar.php?id=<?php echo $pokemon->id ?>' methods="post"  class="btn btn-danger" type="submit" ><i class="far fa-trash-alt"></i></a>
+        </div>
     </div>
 </div>
         <?php
