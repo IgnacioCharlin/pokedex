@@ -15,7 +15,7 @@
      foreach ($resultado as $pokemon){
 ?>
 <div class="card mt-5 container" style="width: 18rem;">
-    <img src="<?php echo $pokemon->imagen ?>" class="card-img-top imagenes-pokemon" alt="imagenes-pokemon">
+    <img src="<?php echo $pokemon->imagen ? $pokemon->imagen : '/pokedex/model/img-temporal/'.$pokemon->id.".jpg" ?>" class="card-img-top imagenes-pokemon" alt="imagenes-pokemon">
     <div class="card-body">
         <h5 class="card-title text-center titulo-card"><?php echo $pokemon->nombre ?></h5>
         <p class="card-text icono-tipo"><?php switch($pokemon->tipo){
@@ -23,6 +23,7 @@
                     echo '<img src="img/Type_Fuego.png">';
                     break;
                 case 'water':
+                case 'agua' :
                     echo '<img src="img/Type_Agua.png">';
                     break;
                 case 'bug':

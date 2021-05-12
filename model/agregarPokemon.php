@@ -1,6 +1,6 @@
 
 <body>
-<form name="MiForm" id="MiForm" method="post" action="insertar.php" enctype="multipart/form-data">
+<form name="MiForm" id="MiForm" method="post" action="insertarNuevo.php" enctype="multipart/form-data">
     <h4 class="text-center">Seleccione imagen a cargar</h4>
     <div class="form-group">
         <label class="col-sm-2 control-label">Archivos</label>
