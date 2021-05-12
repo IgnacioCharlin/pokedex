@@ -1,16 +1,22 @@
 <?php
     include_once('conexion/conexion.php');
 
-    $sentencia = $bd->prepare("SELECT * FROM pokemon");
+
+$sentencia = $bd->prepare("SELECT * FROM pokemon");
     $sentencia->execute();
     $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
     echo '<div class="container cards">';
     ?>
-    <form class="buscador container">
-        <input type="text" class="input-buscador border border-warning rounded" required >
-        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-    </form>
+
+    <div class="container">
+        <form class="buscador" action="model/buscarPokemon.php" method="post">
+            <input type="text" class="input-buscador rounded" name="pokemon-buscado" required >
+            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <a href="model/agregarPokemon.php" class="btn btn-success"><i class="fas fa-plus"></i></a>
+    </div>
+
 <?php
      foreach ($resultado as $pokemon){
 ?>
@@ -35,10 +41,16 @@
                     echo '<img src="img/Type_normal.png">';
                     break;
             }?></p>
+        <?php
+            if(isset($_SESSION["isLogin"])){
+        ?>
         <div class="card-botones">
             <a href='model/editar.php?id=<?php echo $pokemon->id ?>'  class="btn btn-warning"><i class="far fa-edit"></i></a>
             <a href='model/eliminar.php?id=<?php echo $pokemon->id ?>' methods="post"  class="btn btn-danger" type="submit" ><i class="far fa-trash-alt"></i></a>
         </div>
+                <?php
+                    }
+                ?>
     </div>
 </div>
         <?php
@@ -46,7 +58,7 @@
             echo '</div>'
         ?>
 
-    <a href="model/agregarPokemon.php" class="btn btn-primary">Agregar Pokemon</a>
+
 </main>
 </html>
 

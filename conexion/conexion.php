@@ -1,7 +1,7 @@
 <?php
 
-$contraseña="admin";
-$usuario="admin";
+$contraseña="";
+$usuario="root";
 $nombrebd="pokemon";
 $bd='';
 

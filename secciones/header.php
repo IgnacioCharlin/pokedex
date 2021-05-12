@@ -20,13 +20,11 @@
             </a>
             <h1 class="titulo">Pokedex</h1>
                 <form class="formulario" action="secciones/sesion.php" method="POST">
-                    <input type="text" placeholder="Usuario" name="nombre" class="border border-warning rounded">
-                    <input type="password" placeholder="Contraseña" name="contraseña" class="border border-warning rounded">
+                    <input type="text" placeholder="Usuario" name="nombre" class="border border-secondary rounded">
+                    <input type="password" placeholder="Contraseña" name="contraseña" class="border border-secondary rounded">
                     <button type="submit" class="btn btn-primary">Ingresar</button>
+                    <a href="secciones/registrar.php" class="btn btn-outline-success">Registrar</a>
                 </form>
-            <form action="secciones/registrar.php" class="formulario">
-                    <button type="submit" class="btn btn-secondary">Registrarse</button>
-            </form>
     </header>
 
 

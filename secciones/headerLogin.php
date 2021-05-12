@@ -20,7 +20,7 @@
             </a>
                 <h1 class="titulo">Pokedex</h1>
             <form action="/pokedex/secciones/logout.php" class="formulario">
-                    <button type="submit" class="btn btn-secondary">Log out</button>
+                    <button type="submit" class="btn btn-danger">Log out</button>
             </form>
     </header>
 

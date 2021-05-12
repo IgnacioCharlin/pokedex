@@ -10,7 +10,7 @@ foreach ($usuarios as $usuario){
     if ($usuario->nombre == $_POST['nombre']){
         if ($usuario->password == $_POST['contraseña'] ){
             $_SESSION["isLogin"] = true;
-            header("Location: /pokedex");
+             header("Location: /pokedex");
             exit();
         }
         else {
