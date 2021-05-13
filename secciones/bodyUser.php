@@ -14,7 +14,7 @@ $sentencia = $bd->prepare("SELECT * FROM pokemon");
             <input type="text" class="input-buscador rounded" name="pokemon-buscado" required >
             <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
         </form>
-        <a href="model/agregarPokemon.php" class="btn btn-success"><i class="fas fa-plus"></i></a>
+        <a href="model/agregarPokemon.php" class="btn btn-success btn-agregar"><i class="fas fa-plus"></i></a>
     </div>
 
 <?php
@@ -26,19 +26,27 @@ $sentencia = $bd->prepare("SELECT * FROM pokemon");
         <h5 class="card-title text-center titulo-card"><?php echo $pokemon->nombre ?></h5>
         <p class="card-text icono-tipo"><?php switch($pokemon->tipo){
                 case 'fire':
+                case 'fuego':
                     echo '<img src="img/Type_Fuego.png">';
                     break;
                 case 'water':
+                case 'agua':
                     echo '<img src="img/Type_Agua.png">';
                     break;
                 case 'bug':
+                case 'bicho':
                     echo '<img src="img/Type_Bicho.png">';
                     break;
                 case 'grass':
+                case 'hierba':
                     echo '<img src="img/Type_Planta.png">';
                     break;
                 case 'normal':
                     echo '<img src="img/Type_normal.png">';
+                    break;
+                case 'electric':
+                case 'electricidad':
+                    echo '<img src="img/Type_Electric.png">';
                     break;
             }?></p>
         <?php

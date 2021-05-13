@@ -32,11 +32,18 @@ include_once('../conexion/conexion.php');
         $sentencia->execute();
         $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
         if($resultado){
+        $rutaImagen='';
+        if (strpos($resultado[0]->imagen, 'raw') !== false) {
+            $rutaImagen = $resultado[0]->imagen;
+        }else{
+            $rutaImagen='../'.$resultado[0]->imagen;
+        }
+
         ?>
         <div class="card mb-3" style="">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="<?php echo $resultado[0]->imagen ?>" alt="...">
+                    <img src="<?php echo $rutaImagen ?>" alt="..." class="imagen-pokemon-buscada">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body info-buscada">
@@ -44,19 +51,27 @@ include_once('../conexion/conexion.php');
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula viverra nisl. Morbi imperdiet at eros sit amet pulvinar. Etiam finibus euismod interdum. Vestibulum tempor magna arcu, id dictum nulla rhoncus nec. Etiam vulputate nunc at rutrum euismod. Quisque in dui non arcu gravida posuere at ac nunc. Praesent sit amet nulla aliquam, blandit mauris ut, mollis quam. Duis sed mauris felis. Nunc vitae ipsum facilisis odio feugiat tincidunt. Etiam ut volutpat leo. Nunc at orci viverra, imperdiet dui eget, rhoncus nibh. Vivamus efficitur gravida luctus</p>
                         <p class="buscador-tipo card-text"><?php switch($resultado[0]->tipo){
                                 case 'fire':
+                                case 'fuego':
                                     echo '<img src="../img/Type_Fuego.png">';
                                     break;
                                 case 'water':
+                                case 'agua':
                                     echo '<img src="../img/Type_Agua.png">';
                                     break;
                                 case 'bug':
+                                case 'bicho':
                                     echo '<img src="../img/Type_Bicho.png">';
                                     break;
                                 case 'grass':
+                                case 'hierba':
                                     echo '<img src="../img/Type_Planta.png">';
                                     break;
                                 case 'normal':
                                     echo '<img src="../img/Type_normal.png">';
+                                    break;
+                                case 'electric':
+                                case 'electricidad':
+                                    echo '<img src="../img/Type_Electric.png">';
                                     break;
                             }?></p>
                     </div>

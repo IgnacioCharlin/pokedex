@@ -87,6 +87,10 @@ header{
     width: 30%;
 }
 
+.card-botones a:hover{
+    color: white;
+    filter: brightness(80%);
+}
 .border{
     border: none !important;
 }
@@ -99,6 +103,16 @@ header{
 
 .btn-volver{
     width: 100%;
+}
+.btn-agregar{
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+.imagen-pokemon-buscada{
+    width: 20rem;
+    height: 25rem;
 }
 @media (min-width: 768px ) {
     header{
@@ -124,5 +138,10 @@ header{
 
     .btn-volver{
         width: 20%;
+    }
+
+    .btn-agregar{
+        margin-left: 3%;
+        width: 10%;
     }
 }
