@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if( $_SESSION["isLogin"] ){
+if( isset($_SESSION["isLogin"]) ){
     header("location:/pokedex/index.php");
     exit();
 }

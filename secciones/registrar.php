@@ -23,18 +23,19 @@
 <body>
         <div class="container">
         <form action="/pokedex/model/insertarUsuario.php" method="post">
-            <div class="form-group mb-3 mt-5">
-                <label >Usuario</label>
+            <div class="form-group mt-5 col-sm-8 mx-auto">
+                <label class="m-3" >Usuario</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingresa tu usuario" name="usuario">
-            </div>
-            <div class="form-group mb-3">
-                <label class="mb-3" for="exampleInputPassword1">Password</label>
+                <label class="m-3" >Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
-                <label class="mb-3" for="exampleInputPassword1">Repetir password</label>
+                <label class="m-3" >Repetir password</label>
                 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repetir Password" name="rePassword">
 
             </div>
-                <button type="submit" class="btn btn-primary">Registrar</button>
+            <div class="col-sm-8 mx-auto text-center">
+                <button type="submit" class="btn btn-primary m-2">Registrar</button>
+                <a href="../index.php" class="btn btn-danger">Volver</a>
+            </div>
         </form>
         </div>
 </body>

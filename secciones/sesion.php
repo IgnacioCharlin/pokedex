@@ -10,7 +10,7 @@ foreach ($usuarios as $usuario){
     if ($usuario->nombre == $_POST['nombre']){
         if ($usuario->password == $_POST['contraseña'] ){
             $_SESSION["isLogin"] = true;
-            header("Location: /pokedex");
+             header("Location: /pokedex");
             exit();
         }
         else {
@@ -31,17 +31,5 @@ if(isset($_SESSION['nombre'])){
 }else{
     echo ("<h2>No ingresas datos</h2>");
 }
-/*
-<input type="text" placeholder="Usuario" name="nombre">
-                    <input type="password" placeholder="Contraseña" name="contraseña">
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-*/
 
-
-
-
-//echo ($_SESION['nombre']);
-//echo ($_SESION['contraseña']);
-//echo($_POST['nombre']);
-//echo($_POST['contraseña']);
 ?>
