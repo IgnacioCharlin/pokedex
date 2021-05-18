@@ -13,12 +13,12 @@ $sentencia = $bd->prepare("SELECT * FROM pokemon WHERE id = $id");
 $res = $sentencia->execute();
 if ($res){
     header('location: ../model/agregarPokemon.php?error=idExistente');
-    exit("id existente");
+    exit();
 
 }
 
 if(isset($_FILES['img'])){
-    var_dump($_FILES['img']);
+//    var_dump($_FILES['img']);
     $foto=$_FILES["img"]["name"];
     $ruta=$_FILES["img"]["tmp_name"];
     $destino='../img/'.$nombre.'.jpg';

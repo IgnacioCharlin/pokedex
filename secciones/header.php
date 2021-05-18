@@ -22,6 +22,14 @@
                 <form class="formulario" action="secciones/sesion.php" method="POST">
                     <input type="text" placeholder="Usuario" name="nombre" class="border border-secondary rounded">
                     <input type="password" placeholder="Contraseña" name="contraseña" class="border border-secondary rounded">
+                    <?php if (isset($_GET["error"])){
+                        ?>
+                        <div class="mx-auto m-2 text-center alert alert-danger" role="alert">
+                            Usuario o contraseña incorrecto.
+                        </div>
+                        <?php
+                    } ?>
+
                     <button type="submit" class="btn btn-primary m-2">Ingresar</button>
                     <a href="secciones/registrar.php" class="btn btn-outline-success m-2">Registrar</a>
                 </form>

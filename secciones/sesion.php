@@ -14,22 +14,14 @@ foreach ($usuarios as $usuario){
             exit();
         }
         else {
-            header("Location: /pokedex/index.php?error=contrasena");
+            header("Location: /pokedex/index.php?error=userPass");
             exit();
         }
     }
     else {
-        header("Location: /pokedex/index.php?error=usuarioNoEnContrado");
+        header("Location: /pokedex/index.php?error=userPass");
         exit();
     }
-}
-
-//echo $_SESION['nombre'];
-
-if(isset($_SESSION['nombre'])){
-    echo ("<h2>Bienvenido</h2>");
-}else{
-    echo ("<h2>No ingresas datos</h2>");
 }
 
 ?>
